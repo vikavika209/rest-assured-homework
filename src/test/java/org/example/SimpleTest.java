@@ -351,6 +351,11 @@ public class SimpleTest {
     @Test
     void negativeTests(){
 
+        requestSpecification = RestAssured
+                .given()
+                .baseUri("http://localhost:9966")
+                .accept(ContentType.JSON);
+
         requestSpecification
                 .given()
                 .pathParam("visitId", 5)
